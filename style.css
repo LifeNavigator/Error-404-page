@@ -1,0 +1,90 @@
+* {
+	box-sizing: border-box;
+	font-size: 16px;
+}
+
+:root {
+	--ff-header: 'Inconsolata', monospace;
+	--ff-primary: "Poppins", sans-serif;
+	--ff-secondary: 'Space Mono', monospace;
+
+	--fw-bold: 700;
+	--fw-reg: 400;
+
+	--clr-main: #333333;
+	--clr-primary: #4F4F4F;
+
+	--fs-header: 1.5rem;
+	--fs-title: 5rem;
+	--fs-text: 1.125rem;
+	--fs-btn: .87rem;
+
+	--lh: 1.68rem;
+
+	--width-box: 80%;
+	--width-title: 100%;
+	--width-text: 100%;
+}
+
+
+
+/*--- Typography ---*/
+
+.header-text {
+	font-family: var(--ff-header);
+	font-size: var(--fs-header);
+	font-weight: var(--fw-bold);
+	text-transform: uppercase;
+}
+
+.info__title {
+	font-family: var(--ff-secondary);
+	font-size: var(--fs-title);
+	font-weight: var(--fw-bold);
+	letter-spacing: 0.035em;
+	margin-bottom: 0;
+}
+
+.info__text {
+	font-family: var(--ff-secondary);
+	font-size: var(--fs-text);
+	font-weight: var(--fw-reg);
+	line-height: var(--lh);
+	letter-spacing: 0.035em;
+	color: var(--clr-primary);
+}
+
+.info__button {
+	font-family: var(--ff-secondary);
+	font-size: var(--fs-btn);
+	text-transform: uppercase;
+}
+
+/*--- Layout ---*/
+
+.wrapper {
+	max-width: 95%;
+	margin: 0 auto;
+}
+
+main {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	width: 100%;
+}
+
+.image-area,
+.info {
+	max-width: 100%;
+	border: 1px solid red;
+}
+
+.info {
+	margin-top: .5em;
+}
+
+img {
+	display: block;
+	width: 100%;
+}
