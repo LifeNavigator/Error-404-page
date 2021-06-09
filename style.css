@@ -33,6 +33,7 @@ img {
 	--width-title: 100%;
 	--width-text: 100%;
 
+	--marg-title: 1em;
 	/*need to add new for spacing*/
 }
 
@@ -54,7 +55,7 @@ img {
 	font-weight: var(--fw-bold);
 	letter-spacing: 0.035em;
 	margin-bottom: 0;
-	margin-top: 1em;
+	margin-top: var(--marg-title);
 }
 
 .info__text {
@@ -88,12 +89,12 @@ main {
 	align-items: center;
 	width: 100%;
 	margin-top: 5rem;
+
 }
 
 .image-area,
 .info {
 	max-width: 100%;
-	/* border: 1px solid red; */
 }
 
 .image-area {
@@ -124,18 +125,57 @@ main {
 }
 
 footer {
-	margin-top: 10em;
+	margin-top: 5em;
 	text-align: center;
-	color: #4F4F4F;
+	color: var(--clr-primary);
+	display: block;
+	max-width: 100%;
 }
 
-footer a {
+.footer__link {
 	font-weight: bold;
 	text-decoration: none;
+	color: var(--clr-primary);
 }
 
-a:active {
+.footer__link:focus,
+.footer__link:visited {
 	text-decoration: none;
+	color: var(--clr-primary);
 }
 
-@media (min-width: 800px) {}
+@media (min-width: 800px) {
+	:root {
+		--fs-header: 1.5rem;
+		--fs-text: 1.5rem;
+		--fs-btn: .87rem;
+		--lh: 2rem;
+		--marg-title: 0;
+	}
+
+	main {
+		max-width: 100%;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+	.info {
+		max-width: 40%;
+	}
+
+	.image-area {
+		max-width: 55%;
+		padding: 2.7em;
+	}
+
+	/* footer {
+		flex-grow: 3;
+		justify-self: center;
+		align-self: center;
+		text-align: center;
+		;
+	} */
+
+
+}
